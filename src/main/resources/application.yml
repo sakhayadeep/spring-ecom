@@ -1,0 +1,63 @@
+server:
+  port: '8081'
+
+spring:
+  profiles:
+    active: qa
+---
+
+spring:
+  profiles: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/ecomapp
+    password: StepWISE@1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+welcome:
+  message: Hello! welcome to Spring Ecom.
+
+---
+
+spring:
+  profiles: qa
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/ecomapp-qa
+    password: StepWISE@1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+welcome:
+  message: Hello! welcome to Spring Ecom.
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+---
+
+spring:
+  profiles: prod
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/ecomapp-prod
+    password: StepWISE@1
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: 'true'
+
+welcome:
+  message: Hello! welcome to Spring Ecom.
