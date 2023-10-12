@@ -9,13 +9,13 @@ spring:
 spring:
   profiles: dev
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
     url: jdbc:mysql://localhost:3306/ecomapp
+    username: root
     password: StepWISE@1
   jpa:
     hibernate:
       ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
     show-sql: 'true'
 
 welcome:
@@ -26,17 +26,17 @@ welcome:
 spring:
   profiles: qa
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    url: jdbc:mysql://localhost:3306/ecomapp-qa
-    password: StepWISE@1
+    url: jdbc:mysql://spring-ecom-db.ct22tevwiyww.us-east-1.rds.amazonaws.com:3306/ecomapp
+    username: admin
+    password: SpringAWS
   jpa:
     hibernate:
       ddl-auto: update
+      dialect: org.hibernate.dialect.MySQLDialect
     show-sql: 'true'
 
 welcome:
-  message: Hello! welcome to Spring Ecom.
+  message: Hello! welcome to Spring Ecom QA.
 
 management:
   endpoints:
@@ -44,20 +44,3 @@ management:
       exposure:
         include: "*"
         exclude: "env,beans"
-
----
-
-spring:
-  profiles: prod
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    username: root
-    url: jdbc:mysql://localhost:3306/ecomapp-prod
-    password: StepWISE@1
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: 'true'
-
-welcome:
-  message: Hello! welcome to Spring Ecom.
