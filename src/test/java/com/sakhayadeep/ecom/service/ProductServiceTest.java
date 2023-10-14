@@ -35,11 +35,11 @@ class ProductServiceTest {
                 .thenReturn(product);
     }
 
-    @Test
-    @DisplayName("Get Product for valid productName")
-    public void whenValidProductName_thenProductShouldBeFound() {
-//        String productName = "test product";
-//        Product found = productService.fetchProductByName(productName);
-//        assertEquals(productName, found.getProductName());
-    }
+//    @Test
+//    @DisplayName("Get Product for valid productName")
+//    public void whenValidProductName_thenProductShouldBeFound() {
+////        String productName = "test product";
+////        Product found = productService.fetchProductByName(productName);
+////        assertEquals(productName, found.getProductName());
+//    }
 }

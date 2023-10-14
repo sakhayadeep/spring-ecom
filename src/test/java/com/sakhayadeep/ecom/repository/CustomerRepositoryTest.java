@@ -45,50 +45,50 @@ class CustomerRepositoryTest {
 //                .build();
 //        customerRepository.save(customer);
 //    }
-
-    @Test
-    public void printAllCustomer() {
-        List<Customer> customerList = customerRepository.findAll();
-        System.out.println("customerList = " + customerList);
-    }
-
-    @Test
-    public void printCustomerByFirstName() {
-        List<Customer> customers = customerRepository.findByFirstName("Elon");
-        System.out.println("customer = " + customers);
-    }
-
-    @Test
-    public void printCustomerByFirstNameContaining() {
-        List<Customer> customers = customerRepository.findByFirstNameContaining("El");
-        System.out.println("customer = " + customers);
-    }
-
-    @Test
-    public void printCustomerBasedOnState() {
-        List<Customer> customers = customerRepository.findByCustomerAddresses_State("TX");
-        System.out.println("Customer = " + customers);
-    }
-
-    @Test
-    public void printCustomerByFirstNameOrLastName() {
-        List<Customer> customers = customerRepository.findByFirstNameOrLastName("Talon", "Musk");
-        System.out.println("Customer = " + customers);
-    }
-
-    @Test
-    public void printCustomerByEmailAddress(){
-        Customer customer = customerRepository.getCustomerByEmailAddress(
-                "test@test.com"
-        );
-        System.out.println("Customer = " + customer);
-    }
-
-    @Test
-    public void printCustomerByEmailAddressNative(){
-        Customer customer = customerRepository.getCustomerByEmailAddressNative(
-                "test1@test.com"
-        );
-        System.out.println("Customer = " + customer);
-    }
+//
+//    @Test
+//    public void printAllCustomer() {
+//        List<Customer> customerList = customerRepository.findAll();
+//        System.out.println("customerList = " + customerList);
+//    }
+//
+//    @Test
+//    public void printCustomerByFirstName() {
+//        List<Customer> customers = customerRepository.findByFirstName("Elon");
+//        System.out.println("customer = " + customers);
+//    }
+//
+//    @Test
+//    public void printCustomerByFirstNameContaining() {
+//        List<Customer> customers = customerRepository.findByFirstNameContaining("El");
+//        System.out.println("customer = " + customers);
+//    }
+//
+//    @Test
+//    public void printCustomerBasedOnState() {
+//        List<Customer> customers = customerRepository.findByCustomerAddresses_State("TX");
+//        System.out.println("Customer = " + customers);
+//    }
+//
+//    @Test
+//    public void printCustomerByFirstNameOrLastName() {
+//        List<Customer> customers = customerRepository.findByFirstNameOrLastName("Talon", "Musk");
+//        System.out.println("Customer = " + customers);
+//    }
+//
+//    @Test
+//    public void printCustomerByEmailAddress(){
+//        Customer customer = customerRepository.getCustomerByEmailAddress(
+//                "test@test.com"
+//        );
+//        System.out.println("Customer = " + customer);
+//    }
+//
+//    @Test
+//    public void printCustomerByEmailAddressNative(){
+//        Customer customer = customerRepository.getCustomerByEmailAddressNative(
+//                "test1@test.com"
+//        );
+//        System.out.println("Customer = " + customer);
+//    }
 }

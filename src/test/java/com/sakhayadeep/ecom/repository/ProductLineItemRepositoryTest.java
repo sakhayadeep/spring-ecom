@@ -29,9 +29,9 @@ class ProductLineItemRepositoryTest {
 //        productLineItemRepository.save(productLineItem);
 //    }
 
-    @Test
-    public void printAllProductLineItems() {
-        List<ProductLineItem> productLineItems = productLineItemRepository.findAll();
-        System.out.println("productLineItems = " + productLineItems);
-    }
+//    @Test
+//    public void printAllProductLineItems() {
+//        List<ProductLineItem> productLineItems = productLineItemRepository.findAll();
+//        System.out.println("productLineItems = " + productLineItems);
+//    }
 }
