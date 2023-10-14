@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: target/spring-ecom.jar
+  - source: target/spring-ecom.war
     destination: /usr/share/tomcat/webapps/
 hooks:
   BeforeInstall:
