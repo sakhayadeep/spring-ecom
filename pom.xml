@@ -82,6 +82,13 @@
 			<artifactId>karate-junit5</artifactId>
 			<version>1.2.1.RC2</version>
 		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version> <!-- Use the version appropriate for your Servlet container -->
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
