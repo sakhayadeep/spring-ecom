@@ -23,3 +23,5 @@ phases:
 artifacts:
   files:
     - 'target/spring-ecom.jar'
+    - 'appspec.yml'
+    - 'scripts/*.*'
